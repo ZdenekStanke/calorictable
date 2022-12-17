@@ -181,12 +181,15 @@
   width: 11%;
   height: 6%;
   border-radius: 8px;
+  color: white;
   background: #0054fe;
   background-blend-mode: normal;
   text-align: center;
   background-blend-mode: normal;
   cursor: pointer;
   transition: .3s ease transform;
+  font-family: "Gill Sans", sans-serif;
+  border: none;
 
 
 

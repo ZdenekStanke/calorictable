@@ -1,12 +1,21 @@
-
+import React, {useState}  from "react";
 import './App.css';
+import {Modal} from "./Modal";
+
 
 function App() {
+    const [showModal, setShowModal] = useState(false)
+
+
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    }
   return (
 
     <div className="App">
 
-        <div className="graf1"> </div>
+        <div className="graf1"> <h2>0</h2> </div>
         <div className="graf2"> </div>
         <div className="graf3"> </div>
         <div className="graf4"> </div>
@@ -36,11 +45,13 @@ function App() {
         </div>
       <div className="kcalkalkul">Kcalkalkulačka</div>
 
-      <div className="novejcil">
-        <div className="novejcile">Novej cíl</div>
-      </div>
+
+
+          <button onClick={openModal} className="novejcil"> Novej cíl</button>
+        <Modal showModal={showModal} setShowModal={setShowModal} />
+
       <div className="domov">
-        Domov
+        <p><strong>Domov</strong>: {}</p>
       </div>
       <div className="mojejidlo">
         Moje jídlo
