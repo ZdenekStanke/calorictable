@@ -3,6 +3,8 @@ import './App.css';
 import {Modal} from "./Modal";
 
 
+
+
 function App() {
     const [showModal, setShowModal] = useState(false)
 
@@ -51,7 +53,7 @@ function App() {
         <Modal showModal={showModal} setShowModal={setShowModal} />
 
       <div className="domov">
-        <p><strong>Domov</strong>: {}</p>
+        <p><strong>Domov</strong>:{}</p>
       </div>
       <div className="mojejidlo">
         Moje jídlo

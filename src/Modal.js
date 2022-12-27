@@ -6,14 +6,20 @@ import './Model.css';
 
 
 
+export {
+
+}
+
 
 
 
 
 export const Modal = ({showModal, setShowModal}) => {
-    const [number1, setNumber1] = useState(0);
-    const [number2, setNumber2] = useState(0);
-    const [number3, setNumber3] = useState(0);
+
+
+  const [number1, setNumber1]  = useState(0);
+  const [number2, setNumber2] = useState(0);
+  const [number3, setNumber3] = useState(0);
 
     return <>{showModal ?( <div className="Background">
         <div className="wraper">
