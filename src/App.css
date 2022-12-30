@@ -30,7 +30,15 @@
   background-blend-mode: normal;
   box-shadow: 0px 2px 4px
   rgba(0,0,0,0.02);
-
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-family: "Gill Sans", sans-serif;
+  transition: .3s ease transform;
+}
+.graf1:hover {
+  transform: scale(1.04);
 }
 .graf2{
   position: absolute;
@@ -43,7 +51,16 @@
   background-blend-mode: normal;
   box-shadow: 0px 2px 4px
   rgba(0,0,0,0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: .3s ease transform;
 
+
+}
+.graf2:hover {
+  transform: scale(1.04);
 }
 .graf3{
   position: absolute;
@@ -56,7 +73,16 @@
   background-blend-mode: normal;
   box-shadow: 0px 2px 4px
   rgba(0,0,0,0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: .3s ease transform;
 
+
+}
+.graf3:hover {
+  transform: scale(1.04);
 }
 .graf4{
   position: absolute;
@@ -69,9 +95,17 @@
   background-blend-mode: normal;
   box-shadow: 0px 2px 4px
   rgba(0,0,0,0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: .3s ease transform;
+
 
 }
-
+.graf4:hover {
+  transform: scale(1.04);
+}
 .kcal1{
   position: absolute;
   opacity: 0.066125;
@@ -82,6 +116,7 @@
   border-radius: 6px;
   background: #0054fe;
   background-blend-mode: normal;
+
 
 }
 .bilk1{
@@ -258,4 +293,75 @@
   top: 60%;
   left: 6%;
   cursor: pointer;
+}
+.circular-progress {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+
+}
+
+.circular-progress:before {
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.value-container {
+  position: relative;
+  font-size: 140%;
+  color: black;
+  font-family: "Gill Sans", sans-serif;
+
+
+}
+
+
+
+.text2{position: absolute;
+top: 55%;
+  color: #74798c;
+  font-size: 80%;
+}
+.circular-progress1,
+.circular-progress2,
+.circular-progress3{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+
+}
+
+.circular-progress1:before,
+.circular-progress2:before,
+.circular-progress3:before{
+  content: "";
+  position: absolute;
+  height: 84%;
+  width: 84%;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.value-container1,
+.value-container2,
+.value-container3{
+  position: relative;
+  font-size: 140%;
+  color: black;
+  font-family: "Gill Sans", sans-serif;
+
+
+}
+.text{
+  font-family: "Gill Sans", sans-serif;
 }

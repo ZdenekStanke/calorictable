@@ -1,25 +1,38 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import './Model.css';
+import create from "zustand";
 
 
 
 
 
-export {
-
-}
 
 
 
 
 
-export const Modal = ({showModal, setShowModal}) => {
 
 
-  const [number1, setNumber1]  = useState(0);
-  const [number2, setNumber2] = useState(0);
-  const [number3, setNumber3] = useState(0);
+
+ export const Modal  = ({showModal, setShowModal,  }) => {
+
+
+    const [number1, setNumber1]  = useState(0);
+    const [number2, setNumber2] = useState(0);
+    const [number3, setNumber3] = useState(0);
+    const [total, setTotal] = useState(number1 + number2 + number3)
+    const [bilk, bilkTotal] = useState(number1 + number2 + number3)
+    const [tuk, tukTotal] = useState(number1 + number2 + number3)
+    const [sach, sachTotal] = useState(number1 + number2 + number3)
+
+  function addThem(){
+    setTotal( 66 + (14 * number2) + (5 * number1) - (7 * number3));
+    bilkTotal( number2 * 1.64)
+    tukTotal(number2 * 0.75)
+    sachTotal(number2 * 3.2)
+  }
+
 
     return <>{showModal ?( <div className="Background">
         <div className="wraper">
@@ -29,8 +42,16 @@ export const Modal = ({showModal, setShowModal}) => {
                 <input type="number" placeholder="0" value={number3} onChange={e => setNumber3(+e.target.value)}/><p className="roky">věk/roky</p>
 
             </div>
+          <h2>{total}kcal</h2>
+          <h2>{bilk}bk</h2>
+          <h2>{tuk}tuk</h2>
+          <h2>{sach}sach</h2>
 
-                <button   onClick={() => setShowModal(prev => !prev)} className="zpet">  zpět </button>
+          <p><strong>váha</strong>:{number1}</p>
+
+
+                  <button onClick={addThem}>Zadat čísla </button>
+                <button onClick={() => setShowModal(prev => !prev)} className="zpet">  zpět </button>
 
 
         </div>
