@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import './App.css';
-import pc1 from './energy.png';
-import pc2 from './chicken.png';
-import pc4 from './cheeseburger.png';
-import pc3 from './apple.png';
+import pc1 from './icons8-gas-52.png';
+import pc2 from './icons8-thanksgiving-100.png';
+import pc4 from './icons8-hamburger-96.png';
+import pc3 from './icons8-whole-apple-96.png';
+import pc5 from './icons8-apple-96.png';
 import {Modal} from "./Modal";
 
 
@@ -47,7 +48,7 @@ useEffect(()=> {
         progressValue1++;
         valueContainer1.textContent = `${progressValue1}%`;
         progressBar1.style.background = `conic-gradient(
-      dodgerblue ${progressValue1 * 3.6}deg,
+      #339AF0 ${progressValue1 * 3.6}deg,
       #cadcff ${progressValue1 * 3.6}deg
   )`;
         if (progressValue1 === progressEndValue1) {
@@ -196,6 +197,7 @@ useEffect(()=> {
 
 
       <div className="icons8-app">
+          <img className="pc5" src={pc5}/>
         </div>
       <div className="kcalkalkul">Kcalkalkulačka</div>
 

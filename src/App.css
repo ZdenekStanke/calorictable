@@ -6,6 +6,9 @@
   height: 100%;
   background: #f5f6fa;;
   background-blend-mode: normal;
+  font-size: 175%;
+
+
 
 }
 
@@ -115,23 +118,28 @@
 .pic1{
 position: absolute;
   left: 22%;
-  top:38%;
+  top:40%;
+  height: 20%;
+
+  ;
 }
 .pic2{
   position: absolute;
-  left: 30%;
-  top:38%;
+  left: 22%;
+  top:40%;
+  height: 20%;
 }
 .pic3{
   position: absolute;
   left: 22%;
-  top:38%;
+  top:40%;
+  height: 20%;
 }
 .pic4{
   position: absolute;
   left: 22%;
-  top:38%;
-
+  top:40%;
+  height: 20%;
 }
 .kcal1{
   position: absolute;
@@ -252,6 +260,7 @@ position: absolute;
   transition: .3s ease transform;
   font-family: "Gill Sans", sans-serif;
   border: none;
+  font-size: 100%;
 
 
 
@@ -266,14 +275,15 @@ position: absolute;
   position: absolute;
   left: 2%;
   top: 7%;
-  width: 10%;
-  height: 10%;
-  background:  url(icons8-apple-48.png)  no-repeat;
 }
+.pc5{
+  height: 175%;
+}
+
 .kcalkalkul {
   position: absolute;
-  left: 6%;
-  top: 7%;
+  left: 7%;
+  top: 9%;
   width: 116px;
   height: 46px;
   font-family: Bahnschrift;
@@ -282,6 +292,7 @@ position: absolute;
   text-align: center;
   display: flex;
   align-items: center;
+  font-size: 100%;
 }
 .novejcile {
   justify-content: center;
@@ -293,7 +304,7 @@ position: absolute;
 
   color: #ffffff;
   font-family: "Gill Sans", sans-serif;
-  font-size: 100%;
+
 
 }
 .domov{
@@ -323,8 +334,8 @@ position: absolute;
 }
 .circular-progress {
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 225px;
+  width: 225px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -352,7 +363,7 @@ position: absolute;
 
 
 .text2{position: absolute;
-top: 55%;
+top: 56%;
   color: #74798c;
   font-size: 80%;
 }
@@ -360,8 +371,8 @@ top: 55%;
 .circular-progress2,
 .circular-progress3{
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 225px;
+  width: 225px;
   border-radius: 50%;
   display: grid;
   place-items: center;
