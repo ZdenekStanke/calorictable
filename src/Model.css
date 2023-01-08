@@ -42,34 +42,3 @@ border: none;
 .zpet:hover {
     transform: scale(1);
 }
-input {
-    font-size: 130%;
-
-    border: 1px solid #f5f6fa;
-    width: 100%;
-    padding: 16%;
-    text-align: center;
-    background: #f5f6fa;
-    color: #0054fe;
-    background-blend-mode: normal;
-
-}
-.vyska {
-    position: absolute;
-    top: 7%;
-    left: 75%;
-    font-family: Bahnschrift;
-}
-.vaha {
-    position: absolute;
-    top: 33%;
-    left: 75%;
-    font-family: Bahnschrift;
-}
-.roky {
-    position: absolute;
-    left: 75%;
-    top: 63%;
-    font-family: Bahnschrift;
-
-}

@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from "react";
 import './App.css';
+import pc1 from './energy.png';
+import pc2 from './chicken.png';
+import pc4 from './cheeseburger.png';
+import pc3 from './apple.png';
 import {Modal} from "./Modal";
 
 
@@ -10,27 +14,20 @@ import {Modal} from "./Modal";
 
 function App() {
 
-
-    const [showModal, setShowModal ] = useState(false)
-
-
-
-    const openModal = () => {
-        setShowModal(prev => !prev)
-    }
-
-
-
+useEffect(()=> {
     let progressBar = document.querySelector(".circular-progress");
+
     let valueContainer = document.querySelector(".value-container");
+
 
     let progressValue = 0;
     let progressEndValue = 100;
-    let speed = 60;
+    let speed = 10;
 
     let progress = setInterval(() => {
         progressValue++;
-        valueContainer.textContent = `${progressValue}%`;
+        console.log(valueContainer)
+        valueContainer.innerHTML = `${progressValue}` + "%";
         progressBar.style.background = `conic-gradient(
       #0054fe ${progressValue * 3.6}deg,
       #cadcff ${progressValue * 3.6}deg
@@ -39,15 +36,12 @@ function App() {
             clearInterval(progress);
         }
     }, speed);
-
-
-
     let progressBar1 = document.querySelector(".circular-progress1");
     let valueContainer1 = document.querySelector(".value-container1");
 
     let progressValue1 = 0;
     let progressEndValue1 = 80;
-    let speed1 = 60;
+    let speed1 = 10;
 
     let progress1 = setInterval(() => {
         progressValue1++;
@@ -67,7 +61,7 @@ function App() {
 
     let progressValue2 = 0;
     let progressEndValue2 = 90;
-    let speed2 = 60;
+    let speed2 = 10;
 
     let progress2 = setInterval(() => {
         progressValue2++;
@@ -86,7 +80,7 @@ function App() {
 
     let progressValue3 = 0;
     let progressEndValue3 = 30;
-    let speed3 = 60;
+    let speed3 = 10;
 
     let progress3 = setInterval(() => {
         progressValue3++;
@@ -99,14 +93,36 @@ function App() {
             clearInterval(progress3);
         }
     }, speed3);
+})
+
+
+    const [number1, setNumber1]  = useState(0);
+    const [number2, setNumber2] = useState(0);
+    const [number3, setNumber3] = useState(0);
+    const [total, setTotal] = useState(number1 + number2 + number3)
+    const [bilk, bilkTotal] = useState(number1 + number2 + number3)
+    const [tuk, tukTotal] = useState(number1 + number2 + number3)
+    const [sach, sachTotal] = useState(number1 + number2 + number3)
+
+    function addThem(){
+        setTotal( 66 + (14 * number2) + (5 * number1) - (7 * number3));
+        bilkTotal( number2 * 1.64)
+        tukTotal(number2 * 0.75)
+        sachTotal(number2 * 3.2)
+    }
+
+
+
+
   return (
 
 
-    <div className="App">
+    <div  className="App">
+
 
         <div className="graf1">
-            <div className="circular-progress">
-            <div className="value-container">0%</div>
+            <div id="Honza" className="circular-progress">
+            <div id="Honza2" className="value-container">0%</div>
                 <div className="text2">1500kcal</div>
             </div>
 
@@ -138,25 +154,42 @@ function App() {
 
             <div className="text">Tuky</div>
 
+
         </div>
       <div className="hledani">
 
       </div>
       <div className="kcal">
+          <p className="textkcal">{total}</p>
+          <p className="textkcal1">průměr kcal</p>
+          <img className="pic1" src={pc1}/>
 
       <div className="kcal1">
-          <img src="cheeseburger.png"/>
+
       </div>
       </div>
       <div className="bilk">
+          <p className="textbilk">{bilk}</p>
+          <p className="textkcal1">průměr bílkovin</p>
+          <img className="pic2" src={pc2}/>
           <div className="bilk1">
+
           </div>
       </div>
       <div className="sach">
+          <p className="textsach">{sach}</p>
+          <p className="textkcal1">průměr sacharidů</p>
+          <img className="pic3" src={pc3}/>
           <div className="sach1">  </div>
+
       </div>
       <div className="tuk">
-          <div className="tuk1">  </div>
+          <p className="texttuky">{tuk}</p>
+          <p className="textkcal1">průměr tuku</p>
+          <img className="pic4" src={pc4}/>
+          <div className="tuk1">
+
+          </div>
       </div>
 
     <div className="nabidka">
@@ -168,18 +201,12 @@ function App() {
 
 
 
-          <button onClick={openModal} className="novejcil"> Novej cíl</button>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
+          <button onClick={addThem} className="novejcil"> Novej cíl</button>
 
-      <div className="domov">
-        <p><strong>výška/cm</strong>:{}</p>
-      </div>
-      <div className="mojejidlo">
-          <p><strong>váha/kg</strong>:{}</p>
-      </div>
-      <div className="cviky">
-          <p><strong>věk/roky</strong>:{}</p>
-      </div>
+
+        <input className="input1" type="number" placeholder="0" value={number1} onChange={e => setNumber1(+e.target.value)} /><p className="p1">výška/cm</p>
+        <input className="input2" type="number" placeholder="0" value={number2} onChange={e => setNumber2(+e.target.value)}/><p className="p2">váha/kg </p>
+        <input className="input3" type="number" placeholder="0" value={number3} onChange={e => setNumber3(+e.target.value)}/><p className="p3">věk/roky</p>
     </div>
 
 
